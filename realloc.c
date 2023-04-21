@@ -9,7 +9,7 @@
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int i
+	unsigned int i;
 
 	for (i = 0; i < n; i++)
 		s[i] = b;
@@ -20,14 +20,14 @@ char *_memset(char *s, char b, unsigned int n)
  * ffree - frees a string of strings
  * @pp: string of strings
  */
-void ffree(char *pp)
+void ffree(char **pp)
 {
 	char **a = pp;
 
 	if (!pp)
 		return;
 	while (*pp)
-		free(*pp);
+		free(*pp++);
 	free(a);
 }
 
