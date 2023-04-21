@@ -80,7 +80,7 @@ char *find_path(info_t *info, char *pathstr, char *cmd)
 				break;
 			curr_pos = i;
 		}
-		i++
+		i++;
 	}
 	return (NULL);
 }
